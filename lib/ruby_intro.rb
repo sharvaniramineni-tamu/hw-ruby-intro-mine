@@ -13,6 +13,7 @@ def sum(arr)
   sum = 0
   arr.each { |x| sum = sum + x}
   return sum
+  
 end
 
 def max_2_sum(arr)
