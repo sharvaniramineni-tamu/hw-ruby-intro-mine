@@ -39,6 +39,21 @@ end
 
 def sum_to_n?(arr, number)
   # YOUR CODE HERE
+
+  # tracking already viisted elements
+  elements_seen = []
+
+  arr.each do |x|
+    # trying to find the difference between the number and array element
+    # and verify if difference is present in visited list or not 
+    difference = number - x
+    return true if elements_seen.include?(difference)
+
+    # adding visited element to elements_seen array
+    elements_seen << x
+  end
+
+  return false
 end
 
 # Part 2
