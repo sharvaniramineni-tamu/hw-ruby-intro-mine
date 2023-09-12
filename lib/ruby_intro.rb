@@ -4,6 +4,15 @@
 
 def sum(arr)
   # YOUR CODE HERE
+  # check whether array is empty or not
+  if arr.length <= 0 
+    return 0
+  end
+
+  # calculate the sum of array elements
+  sum = 0
+  arr.each { |x| sum = sum + x}
+  return sum
 end
 
 def max_2_sum(arr)
