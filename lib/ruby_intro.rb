@@ -3,7 +3,6 @@
 # Part 1
 
 def sum(arr)
-  # YOUR CODE HERE
   # check whether array is empty or not
   if arr.length <= 0 
     return 0
@@ -17,7 +16,6 @@ def sum(arr)
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
   #calculate length of array
   len = arr.length
 
@@ -38,8 +36,6 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
-
   # tracking already viisted elements
   elements_seen = []
 
@@ -59,8 +55,6 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
-
   final = "Hello, " + name 
   return final 
 end
@@ -89,8 +83,6 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
-
   #get the length of string which represents number of digits 
   base_val = string.length()-1
 
@@ -124,7 +116,6 @@ end
 
 # Object representing a book
 class BookInStock
-  # YOUR CODE HERE
   def initialize(isbn, price)
     if isbn.empty?
       raise ArgumentError.new
