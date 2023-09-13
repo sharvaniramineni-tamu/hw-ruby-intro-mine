@@ -60,14 +60,64 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+
+  final = "Hello, " + name 
+  return final 
 end
 
 def starts_with_consonant?(string)
   # YOUR CODE HERE
+
+  vowels = ['A', 'E', 'I', 'O', 'U']
+
+  # if empty string then return false
+  if string.length() == 0
+    return false 
+  end
+
+  # if string doesn't start with alphabet return false
+  if not string[0].match?(/[[:alpha:]]/) 
+     return false 
+   end
+
+  # if string starts with consonants return true if not false
+  if vowels.include?(string[0].upcase())
+    return false
+  else 
+    return true
+  end 
 end
 
 def binary_multiple_of_4?(string)
   # YOUR CODE HERE
+
+  #get the length of string which represents number of digits 
+  base_val = string.length()-1
+
+  # if empty string then return false
+  if string.length() == 0 
+    return false
+  end 
+
+  # logic to convert binary to decimal number
+  sum = 0
+  string.split('').each do |x|
+    if not (x.match?('0') or x.match?('1'))
+      return false
+    end
+    
+    digit = x.to_i
+    sum = sum + ( digit * (2 ** base_val))
+    base_val = base_val - 1
+  end
+  decimal_val = sum 
+
+  # verifying whether number is multiplier of 4 or not
+  if decimal_val.remainder(4) == 0
+    return true
+  else
+    return false
+  end 
 end
 
 # Part 3
